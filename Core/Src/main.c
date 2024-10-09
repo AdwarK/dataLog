@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include <stdio.h>
+#include "HTU21D.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,8 +47,7 @@ I2C_HandleTypeDef hi2c1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-static const uint8_t HTU21D_ADDR = 0x40 << 1 ; // bitshifting to the left since 8 bit address
-static const uint8_t HTU2; // LEFT HERE GETTING ADDRESSES FOR TEMP AND STUFF
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,7 +56,7 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+void I2C_Scanner(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -96,9 +96,8 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-    uint8_t soft_reset = 0xFE;
-    HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR << 1, &soft_reset, 1, HAL_MAX_DELAY);
-    HAL_Delay(15); // wait for reset to complete
+
+    HTU21D_init(&hi2c1);
 
     // scanning to detect if sensor is found, and at what address.
     I2C_Scanner();
@@ -112,13 +111,13 @@ int main(void)
   {
     /* USER CODE END WHILE */
       HAL_GPIO_WritePin(GPIOA,LD2_Pin,GPIO_PIN_SET);
-      HAL_Delay(1000);
-      read_temperature();
+      HAL_Delay(20);
+      read_temperature(&hi2c1,&huart2);
       //I2C_Scanner();
-      HAL_Delay(1000);
-      read_humidity();
+      //HAL_Delay(500);
+      read_humidity(&hi2c1,&huart2);
       HAL_GPIO_WritePin(GPIOA,LD2_Pin,GPIO_PIN_RESET);
-      HAL_Delay(250);
+      HAL_Delay(20);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -202,92 +201,7 @@ static void MX_I2C1_Init(void)
 }
   /* USER CODE BEGIN I2C1_Init 2 */
   
-  #define HTU21D_ADDR 0x40 << 1 // I2C address of HTU21D
-  #define Temp_Measure_Hold 0xE3 // command to trigger temperature measurement
-  #define Humid_Measure_Hold 0xE5 // command to trigger a humidity measurement
-
-  void read_humidity(void)
-  {
-    uint8_t humidity_command = Humid_Measure_Hold;
-    uint8_t humid_data[3]; // to store humidity data (2 bytes + checksum)
-    uint16_t raw_humid;
-    float humidity;
-
-    //sending command to trigger humidity reading.
-    if(HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR, &humidity_command, 1, HAL_MAX_DELAY) != HAL_OK)
-    {
-      char errMsg[] = "error sending humidity command!\r\n";
-      HAL_UART_Transmit(&huart2,(uint8_t*)errMsg, strlen(errMsg), HAL_MAX_DELAY);
-      return;
-    }
-
-    // receiving humidity data total size 3 2 bytes of data + 1 checksum
-    if(HAL_I2C_Master_Receive(&hi2c1,HTU21D_ADDR,humid_data,3,HAL_MAX_DELAY) != HAL_OK)
-    {
-      char errMsg[] = "error receiving humidity data!\r\n";
-      HAL_UART_Transmit(&huart2, (uint8_t*)errMsg, strlen(errMsg),HAL_MAX_DELAY);
-      return;
-    }
-
-    // processing data from humidity packet
-
-    raw_humid = ((uint16_t)humid_data[0] << 8) | (uint16_t)humid_data[1];
-    raw_humid &= 0xFFFc;
-
-
-    humidity =  -6.0 + (125.0 *(raw_humid/65536.0));
-    char tempMsg[50];
-    sprintf(tempMsg, "Humidity: %.2f %%\r\n", humidity);
-    HAL_UART_Transmit(&huart2, (uint8_t*)tempMsg, strlen(tempMsg), HAL_MAX_DELAY);
-
-    return;
-
-
-
-
-  }
-
-  void read_temperature(void)
-  {
-    uint8_t temp_command = Temp_Measure_Hold;
-    uint8_t temp_data[3]; // To store temperature data (2 bytes + checksum)
-    uint16_t raw_temp;
-    float temperature;
-
-    // uint8_t soft_reset = 0xFE;
-    // HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR << 1, &soft_reset, 1, HAL_MAX_DELAY);
-    // HAL_Delay(15); // wait for reset to complete
-    
-    // Send command to HTU21D to trigger temperature measurement
-    if (HAL_I2C_Master_Transmit(&hi2c1,HTU21D_ADDR, &temp_command, 1, HAL_MAX_DELAY ) != HAL_OK)
-    {
-      // Error Handling
-      char errMsg[] = "Error Sending Temperature command!\r\n";
-      HAL_UART_Transmit(&huart2,(uint8_t*)errMsg, strlen(errMsg), HAL_MAX_DELAY);
-      return;
-    }
-
-    if(HAL_I2C_Master_Receive(&hi2c1, HTU21D_ADDR  , temp_data, 3, HAL_MAX_DELAY) != HAL_OK)
-    {
-      char errMsg[] = "Error receiving temperature data!\r\n";
-      HAL_UART_Transmit(&huart2, (uint8_t*)errMsg, strlen(errMsg), HAL_MAX_DELAY);
-      return ;
-    }
-
-    // Combine the two temperatue bytes into a 16-bit value
-    raw_temp = ((uint16_t)temp_data[0] << 8) | (uint16_t)temp_data[1];
-    raw_temp &= 0xFFFc;
-
-    // convert raw temp to Celsius using Formula from data sheet
-    temperature = -46.85 +(175.72 *(raw_temp / 65536.0));
-
-    // print temperature over UART
-    
-    char tempMsg[50];
-    sprintf(tempMsg, "Temperature: %.2f°C\r\n", temperature);
-    HAL_UART_Transmit(&huart2, (uint8_t*)tempMsg, strlen(tempMsg), HAL_MAX_DELAY);
-  }
-
+ 
 
    void I2C_Scanner(void)
 {
