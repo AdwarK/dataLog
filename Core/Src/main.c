@@ -130,7 +130,7 @@ int main(void)
       read_temperature(&hi2c1,&huart2);
       //I2C_Scanner();
       //HAL_Delay(500);
-      //lcd_send_char(&lcd_handle, 'A'); // This will print 'A' on the LCD
+     
       read_humidity(&hi2c1,&huart2);
       HAL_GPIO_WritePin(GPIOA,LD2_Pin,GPIO_PIN_RESET);
       HAL_Delay(2000);
@@ -288,7 +288,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LD2_Pin|out1_Pin|out2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LD2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -297,7 +297,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LD2_Pin out1_Pin out2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin|out1_Pin|out2_Pin;
+  GPIO_InitStruct.Pin = LD2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -315,19 +315,23 @@ HAL_GPIO_Init(GPIOB,&GPIO_InitStruct);
 
 
 //** setting up all data pins for lcd as outputs**/
-GPIO_InitStruct.Pin = Lcd_D4_Pin | Lcd_D5_Pin;
-GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-GPIO_InitStruct.Pull = GPIO_NOPULL;
-GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+// GPIO_InitStruct.Pin = Lcd_D4_Pin | Lcd_D5_Pin;
+// GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+// GPIO_InitStruct.Pull = GPIO_NOPULL;
+// GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+// HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-GPIO_InitStruct.Pin = Lcd_D6_Pin | Lcd_D7_Pin;
-GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-GPIO_InitStruct.Pull = GPIO_NOPULL;
-GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
+// GPIO_InitStruct.Pin = Lcd_D6_Pin | Lcd_D7_Pin;
+// GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+// GPIO_InitStruct.Pull = GPIO_NOPULL;
+// GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+// HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
 
-GPIO_InitStruct.Pin = Lcd_ReadWrite_Pin | Lcd_Enable_Pin | Lcd_RegSel_Pin;
+// turing off all gpio's at init for good practice
+ HAL_GPIO_WritePin(GPIOA,Lcd_ReadWrite_Pin | Lcd_Enable_Pin | Lcd_RegSel_Pin |Lcd_D7_Pin
+| Lcd_D6_Pin | Lcd_D5_Pin | Lcd_D4_Pin, GPIO_PIN_RESET);
+GPIO_InitStruct.Pin = Lcd_ReadWrite_Pin | Lcd_Enable_Pin | Lcd_RegSel_Pin |Lcd_D7_Pin
+| Lcd_D6_Pin | Lcd_D5_Pin | Lcd_D4_Pin ;
 GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 GPIO_InitStruct.Pull = GPIO_NOPULL;
 GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;

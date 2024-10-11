@@ -79,21 +79,21 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 
 //defing gpio pins used for d[0:3] pins going to the 4 data bits of the LCD screen
-#define Lcd_D4_Pin GPIO_PIN_14 // all pin descriptions located on pg7 of chfah1602A datasheet
-#define Lcd_D4_GPIO_Port GPIOC
-#define Lcd_D5_Pin GPIO_PIN_15
-#define Lcd_D5_GPIO_Port GPIOC
-#define Lcd_D6_Pin GPIO_PIN_0
-#define Lcd_D6_GPIO_Port GPIOH
-#define Lcd_D7_Pin GPIO_PIN_1 
-#define Lcd_D7_GPIO_Port GPIOH
+#define Lcd_D4_Pin GPIO_PIN_12 // all pin descriptions located on pg7 of chfah1602A datasheet
+#define Lcd_D4_GPIO_Port GPIOA
+#define Lcd_D5_Pin GPIO_PIN_11
+#define Lcd_D5_GPIO_Port GPIOA
+#define Lcd_D6_Pin GPIO_PIN_10
+#define Lcd_D6_GPIO_Port GPIOA
+#define Lcd_D7_Pin GPIO_PIN_9
+#define Lcd_D7_GPIO_Port GPIOA
 
 //defining gpio pins used for reading and writing intructions to the LCD
-#define Lcd_RegSel_Pin GPIO_PIN_13
+#define Lcd_RegSel_Pin GPIO_PIN_8
 #define Lcd_RegSel_GPIO_Port GPIOA
-#define Lcd_ReadWrite_Pin GPIO_PIN_14
+#define Lcd_ReadWrite_Pin GPIO_PIN_7
 #define Lcd_ReadWrite_GPIO_Port GPIOA
-#define Lcd_Enable_Pin GPIO_PIN_15
+#define Lcd_Enable_Pin GPIO_PIN_6
 #define Lcd_Enable_GPIO_Port GPIOA
 
 

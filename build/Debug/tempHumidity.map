@@ -3424,7 +3424,7 @@ LOAD /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-non
                 0x08000000                g_pfnVectors
                 0x08000198                        . = ALIGN (0x4)
 
-.text           0x080001a0     0x74fc
+.text           0x080001a0     0x74c8
                 0x080001a0                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001a0       0x40 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -3710,361 +3710,361 @@ LOAD /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-non
  .text.MX_USART2_UART_Init
                 0x08004428       0x54 CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
  .text.MX_GPIO_Init
-                0x0800447c      0x160 CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
+                0x0800447c      0x12c CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
  .text.Error_Handler
-                0x080045dc        0xc CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
-                0x080045dc                Error_Handler
+                0x080045a8        0xc CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
+                0x080045a8                Error_Handler
  .text.NMI_Handler
-                0x080045e8        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080045e8                NMI_Handler
+                0x080045b4        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045b4                NMI_Handler
  .text.HardFault_Handler
-                0x080045f0        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080045f0                HardFault_Handler
+                0x080045bc        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045bc                HardFault_Handler
  .text.MemManage_Handler
-                0x080045f8        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080045f8                MemManage_Handler
+                0x080045c4        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045c4                MemManage_Handler
  .text.BusFault_Handler
-                0x08004600        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08004600                BusFault_Handler
+                0x080045cc        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045cc                BusFault_Handler
  .text.UsageFault_Handler
-                0x08004608        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08004608                UsageFault_Handler
+                0x080045d4        0x8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045d4                UsageFault_Handler
  .text.SVC_Handler
-                0x08004610        0xe CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08004610                SVC_Handler
+                0x080045dc        0xe CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045dc                SVC_Handler
  .text.DebugMon_Handler
-                0x0800461e        0xe CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800461e                DebugMon_Handler
+                0x080045ea        0xe CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045ea                DebugMon_Handler
  .text.PendSV_Handler
-                0x0800462c        0xe CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800462c                PendSV_Handler
+                0x080045f8        0xe CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080045f8                PendSV_Handler
  .text.SysTick_Handler
-                0x0800463a        0xc CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800463a                SysTick_Handler
- *fill*         0x08004646        0x2 
+                0x08004606        0xc CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08004606                SysTick_Handler
+ *fill*         0x08004612        0x2 
  .text.HAL_MspInit
-                0x08004648       0x50 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08004648                HAL_MspInit
+                0x08004614       0x50 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08004614                HAL_MspInit
  .text.HAL_I2C_MspInit
-                0x08004698       0x90 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08004698                HAL_I2C_MspInit
+                0x08004664       0x90 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08004664                HAL_I2C_MspInit
  .text.HAL_UART_MspInit
-                0x08004728       0x90 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08004728                HAL_UART_MspInit
+                0x080046f4       0x90 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x080046f4                HAL_UART_MspInit
  .text.HAL_I2C_Init
-                0x080047b8      0x288 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
-                0x080047b8                HAL_I2C_Init
+                0x08004784      0x288 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x08004784                HAL_I2C_Init
  .text.HAL_I2C_Master_Transmit
-                0x08004a40      0x1fc CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
-                0x08004a40                HAL_I2C_Master_Transmit
+                0x08004a0c      0x1fc CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x08004a0c                HAL_I2C_Master_Transmit
  .text.HAL_I2C_Master_Receive
-                0x08004c3c      0x464 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
-                0x08004c3c                HAL_I2C_Master_Receive
+                0x08004c08      0x464 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x08004c08                HAL_I2C_Master_Receive
  .text.HAL_I2C_IsDeviceReady
-                0x080050a0      0x25c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
-                0x080050a0                HAL_I2C_IsDeviceReady
+                0x0800506c      0x25c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x0800506c                HAL_I2C_IsDeviceReady
  .text.I2C_MasterRequestWrite
-                0x080052fc      0x104 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x080052c8      0x104 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.I2C_MasterRequestRead
-                0x08005400      0x19c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x080053cc      0x19c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.I2C_WaitOnFlagUntilTimeout
-                0x0800559c       0xf4 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x08005568       0xf4 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.I2C_WaitOnMasterAddressFlagUntilTimeout
-                0x08005690      0x140 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x0800565c      0x140 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.I2C_WaitOnTXEFlagUntilTimeout
-                0x080057d0       0x90 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x0800579c       0x90 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.I2C_WaitOnBTFFlagUntilTimeout
-                0x08005860       0x90 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x0800582c       0x90 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.I2C_WaitOnRXNEFlagUntilTimeout
-                0x080058f0       0xba CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x080058bc       0xba CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.I2C_IsAcknowledgeFailed
-                0x080059aa       0x5e CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+                0x08005976       0x5e CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
  .text.HAL_RCC_OscConfig
-                0x08005a08      0x4f0 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08005a08                HAL_RCC_OscConfig
+                0x080059d4      0x4f0 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x080059d4                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x08005ef8      0x1cc CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08005ef8                HAL_RCC_ClockConfig
+                0x08005ec4      0x1cc CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08005ec4                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x080060c4      0x20c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080060c4                HAL_RCC_GetSysClockFreq
+                0x08006090      0x20c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08006090                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x080062d0       0x18 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080062d0                HAL_RCC_GetHCLKFreq
+                0x0800629c       0x18 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x0800629c                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x080062e8       0x28 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080062e8                HAL_RCC_GetPCLK1Freq
+                0x080062b4       0x28 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x080062b4                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x08006310       0x28 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08006310                HAL_RCC_GetPCLK2Freq
+                0x080062dc       0x28 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x080062dc                HAL_RCC_GetPCLK2Freq
  .text.HAL_GPIO_Init
-                0x08006338      0x308 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x08006338                HAL_GPIO_Init
+                0x08006304      0x308 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x08006304                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x08006640       0x32 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x08006640                HAL_GPIO_WritePin
- *fill*         0x08006672        0x2 
+                0x0800660c       0x32 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x0800660c                HAL_GPIO_WritePin
+ *fill*         0x0800663e        0x2 
  .text.__NVIC_SetPriorityGrouping
-                0x08006674       0x48 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08006640       0x48 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.__NVIC_GetPriorityGrouping
-                0x080066bc       0x1c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08006688       0x1c CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.__NVIC_SetPriority
-                0x080066d8       0x54 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080066a4       0x54 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.NVIC_EncodePriority
-                0x0800672c       0x66 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- *fill*         0x08006792        0x2 
+                0x080066f8       0x66 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ *fill*         0x0800675e        0x2 
  .text.SysTick_Config
-                0x08006794       0x44 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08006760       0x44 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.HAL_NVIC_SetPriorityGrouping
-                0x080067d8       0x16 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x080067d8                HAL_NVIC_SetPriorityGrouping
+                0x080067a4       0x16 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080067a4                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x080067ee       0x38 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x080067ee                HAL_NVIC_SetPriority
+                0x080067ba       0x38 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080067ba                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x08006826       0x18 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x08006826                HAL_SYSTICK_Config
- *fill*         0x0800683e        0x2 
+                0x080067f2       0x18 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080067f2                HAL_SYSTICK_Config
+ *fill*         0x0800680a        0x2 
  .text.HAL_Init
-                0x08006840       0x44 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08006840                HAL_Init
+                0x0800680c       0x44 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0800680c                HAL_Init
  .text.HAL_InitTick
-                0x08006884       0x60 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08006884                HAL_InitTick
+                0x08006850       0x60 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08006850                HAL_InitTick
  .text.HAL_IncTick
-                0x080068e4       0x28 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x080068e4                HAL_IncTick
+                0x080068b0       0x28 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x080068b0                HAL_IncTick
  .text.HAL_GetTick
-                0x0800690c       0x18 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0800690c                HAL_GetTick
+                0x080068d8       0x18 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x080068d8                HAL_GetTick
  .text.HAL_Delay
-                0x08006924       0x48 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08006924                HAL_Delay
+                0x080068f0       0x48 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x080068f0                HAL_Delay
  .text.HAL_UART_Init
-                0x0800696c       0xa0 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x0800696c                HAL_UART_Init
+                0x08006938       0xa0 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08006938                HAL_UART_Init
  .text.HAL_UART_Transmit
-                0x08006a0c      0x116 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x08006a0c                HAL_UART_Transmit
+                0x080069d8      0x116 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080069d8                HAL_UART_Transmit
  .text.UART_WaitOnFlagUntilTimeout
-                0x08006b22       0xb2 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08006aee       0xb2 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.UART_EndRxTransfer
-                0x08006bd4       0xc6 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- *fill*         0x08006c9a        0x2 
+                0x08006ba0       0xc6 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ *fill*         0x08006c66        0x2 
  .text.UART_SetConfig
-                0x08006c9c      0x4e8 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08006c68      0x4e8 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.SystemInit
-                0x08007184       0x24 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08007184                SystemInit
- .text._sbrk    0x080071a8       0x6c CMakeFiles/tempHumidity.dir/Core/Src/sysmem.c.obj
-                0x080071a8                _sbrk
- .text._getpid  0x08007214       0x10 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x08007214                _getpid
- .text._kill    0x08007224       0x20 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x08007224                _kill
- .text._exit    0x08007244       0x16 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x08007244                _exit
- .text._read    0x0800725a       0x3a CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x0800725a                _read
- .text._write   0x08007294       0x38 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x08007294                _write
- .text._close   0x080072cc       0x18 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x080072cc                _close
- .text._fstat   0x080072e4       0x20 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x080072e4                _fstat
- .text._isatty  0x08007304       0x16 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x08007304                _isatty
- .text._lseek   0x0800731a       0x1a CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
-                0x0800731a                _lseek
+                0x08007150       0x24 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08007150                SystemInit
+ .text._sbrk    0x08007174       0x6c CMakeFiles/tempHumidity.dir/Core/Src/sysmem.c.obj
+                0x08007174                _sbrk
+ .text._getpid  0x080071e0       0x10 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x080071e0                _getpid
+ .text._kill    0x080071f0       0x20 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x080071f0                _kill
+ .text._exit    0x08007210       0x16 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x08007210                _exit
+ .text._read    0x08007226       0x3a CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x08007226                _read
+ .text._write   0x08007260       0x38 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x08007260                _write
+ .text._close   0x08007298       0x18 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x08007298                _close
+ .text._fstat   0x080072b0       0x20 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x080072b0                _fstat
+ .text._isatty  0x080072d0       0x16 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x080072d0                _isatty
+ .text._lseek   0x080072e6       0x1a CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+                0x080072e6                _lseek
  .text.Reset_Handler
-                0x08007334       0x50 CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
-                0x08007334                Reset_Handler
+                0x08007300       0x50 CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
+                0x08007300                Reset_Handler
  .text.Default_Handler
-                0x08007384        0x2 CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
-                0x08007384                RTC_Alarm_IRQHandler
-                0x08007384                EXTI2_IRQHandler
-                0x08007384                SPI4_IRQHandler
-                0x08007384                TIM1_CC_IRQHandler
-                0x08007384                DMA2_Stream5_IRQHandler
-                0x08007384                DMA1_Stream5_IRQHandler
-                0x08007384                PVD_IRQHandler
-                0x08007384                SDIO_IRQHandler
-                0x08007384                TAMP_STAMP_IRQHandler
-                0x08007384                EXTI3_IRQHandler
-                0x08007384                TIM1_UP_TIM10_IRQHandler
-                0x08007384                I2C3_ER_IRQHandler
-                0x08007384                EXTI0_IRQHandler
-                0x08007384                I2C2_EV_IRQHandler
-                0x08007384                DMA1_Stream2_IRQHandler
-                0x08007384                FPU_IRQHandler
-                0x08007384                DMA2_Stream2_IRQHandler
-                0x08007384                SPI1_IRQHandler
-                0x08007384                TIM1_BRK_TIM9_IRQHandler
-                0x08007384                DMA2_Stream3_IRQHandler
-                0x08007384                USART6_IRQHandler
-                0x08007384                DMA2_Stream0_IRQHandler
-                0x08007384                TIM4_IRQHandler
-                0x08007384                I2C1_EV_IRQHandler
-                0x08007384                DMA1_Stream6_IRQHandler
-                0x08007384                DMA1_Stream1_IRQHandler
-                0x08007384                TIM3_IRQHandler
-                0x08007384                RCC_IRQHandler
-                0x08007384                Default_Handler
-                0x08007384                EXTI15_10_IRQHandler
-                0x08007384                ADC_IRQHandler
-                0x08007384                DMA1_Stream7_IRQHandler
-                0x08007384                SPI5_IRQHandler
-                0x08007384                TIM5_IRQHandler
-                0x08007384                DMA2_Stream7_IRQHandler
-                0x08007384                I2C3_EV_IRQHandler
-                0x08007384                EXTI9_5_IRQHandler
-                0x08007384                RTC_WKUP_IRQHandler
-                0x08007384                SPI2_IRQHandler
-                0x08007384                DMA1_Stream0_IRQHandler
-                0x08007384                EXTI4_IRQHandler
-                0x08007384                WWDG_IRQHandler
-                0x08007384                TIM2_IRQHandler
-                0x08007384                OTG_FS_WKUP_IRQHandler
-                0x08007384                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08007384                EXTI1_IRQHandler
-                0x08007384                USART2_IRQHandler
-                0x08007384                I2C2_ER_IRQHandler
-                0x08007384                DMA2_Stream1_IRQHandler
-                0x08007384                FLASH_IRQHandler
-                0x08007384                DMA2_Stream4_IRQHandler
-                0x08007384                USART1_IRQHandler
-                0x08007384                OTG_FS_IRQHandler
-                0x08007384                SPI3_IRQHandler
-                0x08007384                DMA1_Stream4_IRQHandler
-                0x08007384                I2C1_ER_IRQHandler
-                0x08007384                DMA2_Stream6_IRQHandler
-                0x08007384                DMA1_Stream3_IRQHandler
- *fill*         0x08007386        0x2 
- .text.sprintf  0x08007388       0x40 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-sprintf.o)
-                0x08007388                sprintf
-                0x08007388                siprintf
- .text.__errno  0x080073c8        0xc /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
-                0x080073c8                __errno
+                0x08007350        0x2 CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
+                0x08007350                RTC_Alarm_IRQHandler
+                0x08007350                EXTI2_IRQHandler
+                0x08007350                SPI4_IRQHandler
+                0x08007350                TIM1_CC_IRQHandler
+                0x08007350                DMA2_Stream5_IRQHandler
+                0x08007350                DMA1_Stream5_IRQHandler
+                0x08007350                PVD_IRQHandler
+                0x08007350                SDIO_IRQHandler
+                0x08007350                TAMP_STAMP_IRQHandler
+                0x08007350                EXTI3_IRQHandler
+                0x08007350                TIM1_UP_TIM10_IRQHandler
+                0x08007350                I2C3_ER_IRQHandler
+                0x08007350                EXTI0_IRQHandler
+                0x08007350                I2C2_EV_IRQHandler
+                0x08007350                DMA1_Stream2_IRQHandler
+                0x08007350                FPU_IRQHandler
+                0x08007350                DMA2_Stream2_IRQHandler
+                0x08007350                SPI1_IRQHandler
+                0x08007350                TIM1_BRK_TIM9_IRQHandler
+                0x08007350                DMA2_Stream3_IRQHandler
+                0x08007350                USART6_IRQHandler
+                0x08007350                DMA2_Stream0_IRQHandler
+                0x08007350                TIM4_IRQHandler
+                0x08007350                I2C1_EV_IRQHandler
+                0x08007350                DMA1_Stream6_IRQHandler
+                0x08007350                DMA1_Stream1_IRQHandler
+                0x08007350                TIM3_IRQHandler
+                0x08007350                RCC_IRQHandler
+                0x08007350                Default_Handler
+                0x08007350                EXTI15_10_IRQHandler
+                0x08007350                ADC_IRQHandler
+                0x08007350                DMA1_Stream7_IRQHandler
+                0x08007350                SPI5_IRQHandler
+                0x08007350                TIM5_IRQHandler
+                0x08007350                DMA2_Stream7_IRQHandler
+                0x08007350                I2C3_EV_IRQHandler
+                0x08007350                EXTI9_5_IRQHandler
+                0x08007350                RTC_WKUP_IRQHandler
+                0x08007350                SPI2_IRQHandler
+                0x08007350                DMA1_Stream0_IRQHandler
+                0x08007350                EXTI4_IRQHandler
+                0x08007350                WWDG_IRQHandler
+                0x08007350                TIM2_IRQHandler
+                0x08007350                OTG_FS_WKUP_IRQHandler
+                0x08007350                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08007350                EXTI1_IRQHandler
+                0x08007350                USART2_IRQHandler
+                0x08007350                I2C2_ER_IRQHandler
+                0x08007350                DMA2_Stream1_IRQHandler
+                0x08007350                FLASH_IRQHandler
+                0x08007350                DMA2_Stream4_IRQHandler
+                0x08007350                USART1_IRQHandler
+                0x08007350                OTG_FS_IRQHandler
+                0x08007350                SPI3_IRQHandler
+                0x08007350                DMA1_Stream4_IRQHandler
+                0x08007350                I2C1_ER_IRQHandler
+                0x08007350                DMA2_Stream6_IRQHandler
+                0x08007350                DMA1_Stream3_IRQHandler
+ *fill*         0x08007352        0x2 
+ .text.sprintf  0x08007354       0x40 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-sprintf.o)
+                0x08007354                sprintf
+                0x08007354                siprintf
+ .text.__errno  0x08007394        0xc /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+                0x08007394                __errno
  .text.__ssputs_r
-                0x080073d4       0xb6 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
-                0x080073d4                __ssputs_r
- *fill*         0x0800748a        0x2 
+                0x080073a0       0xb6 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
+                0x080073a0                __ssputs_r
+ *fill*         0x08007456        0x2 
  .text._svfprintf_r
-                0x0800748c      0x1f8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
-                0x0800748c                _svfprintf_r
-                0x0800748c                _svfiprintf_r
+                0x08007458      0x1f8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
+                0x08007458                _svfprintf_r
+                0x08007458                _svfiprintf_r
  *(.glue_7)
- .glue_7        0x08007684        0x0 linker stubs
+ .glue_7        0x08007650        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08007684        0x0 linker stubs
+ .glue_7t       0x08007650        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08007684        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08007650        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08007684        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08007684                _init
- .init          0x08007688        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08007650        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08007650                _init
+ .init          0x08007654        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08007690        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08007690                _fini
- .fini          0x08007694        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0800769c                        . = ALIGN (0x4)
-                0x0800769c                        _etext = .
+ .fini          0x0800765c        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800765c                _fini
+ .fini          0x08007660        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08007668                        . = ALIGN (0x4)
+                0x08007668                        _etext = .
 
-.vfp11_veneer   0x0800769c        0x0
- .vfp11_veneer  0x0800769c        0x0 linker stubs
+.vfp11_veneer   0x08007668        0x0
+ .vfp11_veneer  0x08007668        0x0 linker stubs
 
-.v4_bx          0x0800769c        0x0
- .v4_bx         0x0800769c        0x0 linker stubs
+.v4_bx          0x08007668        0x0
+ .v4_bx         0x08007668        0x0 linker stubs
 
-.iplt           0x0800769c        0x0
- .iplt          0x0800769c        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08007668        0x0
+ .iplt          0x08007668        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x080076a0      0x4b8
-                0x080076a0                        . = ALIGN (0x4)
+.rodata         0x08007668      0x4b8
+                0x08007668                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x080076a0       0xc0 CMakeFiles/tempHumidity.dir/Core/Src/HTU21D.c.obj
- .rodata        0x08007760       0x70 CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
+ .rodata        0x08007668       0xc0 CMakeFiles/tempHumidity.dir/Core/Src/HTU21D.c.obj
+ .rodata        0x08007728       0x70 CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
  *(.rodata*)
  .rodata._printf_float.str1.1
-                0x080077d0       0x12 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_float.o)
+                0x08007798       0x12 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_float.o)
  .rodata._printf_i.str1.1
-                0x080077e2       0x22 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080077aa       0x22 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf_i.o)
  .rodata._dtoa_r.str1.1
-                0x08007804       0x8d /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-dtoa.o)
+                0x080077cc       0x8d /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-dtoa.o)
                                  0x8f (size before relaxing)
  .rodata._Balloc.str1.1
-                0x08007891       0x59 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+                0x08007859       0x59 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
                                  0x70 (size before relaxing)
  .rodata.__multadd.str1.1
-                0x080078ea       0x11 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
- *fill*         0x080078ea        0x2 
- .rodata.p05.0  0x080078ec        0xc /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+                0x080078b2       0x11 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+ *fill*         0x080078b2        0x2 
+ .rodata.p05.0  0x080078b4        0xc /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
  .rodata.__mprec_bigtens
-                0x080078f8       0x28 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
-                0x080078f8                __mprec_bigtens
+                0x080078c0       0x28 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+                0x080078c0                __mprec_bigtens
  .rodata.__mprec_tens
-                0x08007920       0xc8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
-                0x08007920                __mprec_tens
+                0x080078e8       0xc8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mprec.o)
+                0x080078e8                __mprec_tens
  .rodata._setlocale_r.str1.1
-                0x080079e8        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
+                0x080079b0        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
                                   0x9 (size before relaxing)
  .rodata.str1.1
-                0x080079f0        0x2 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
+                0x080079b8        0x2 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-locale.o)
  .rodata.__assert_func.str1.1
-                0x080079f2       0x3c /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-assert.o)
+                0x080079ba       0x3c /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-assert.o)
                                  0x3d (size before relaxing)
  .rodata._ctype_
-                0x08007a2e      0x101 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-ctype_.o)
-                0x08007a2e                _ctype_
+                0x080079f6      0x101 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-ctype_.o)
+                0x080079f6                _ctype_
  .rodata._vfprintf_r.str1.1
-                0x08007b2f       0x11 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf.o)
+                0x08007af7       0x11 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-nano-vfprintf.o)
  .rodata.AHBPrescTable
-                0x08007b40       0x10 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08007b40                AHBPrescTable
+                0x08007b08       0x10 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08007b08                AHBPrescTable
  .rodata.APBPrescTable
-                0x08007b50        0x8 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08007b50                APBPrescTable
+                0x08007b18        0x8 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08007b18                APBPrescTable
  .rodata._svfprintf_r.str1.1
-                0x08007b58       0x11 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
-                0x08007b6c                        . = ALIGN (0x4)
+                0x08007b20       0x11 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
+                0x08007b34                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08007b58        0x8
-                0x08007b58                        __exidx_start = .
+.ARM            0x08007b20        0x8
+                0x08007b20                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08007b58        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memchr.o)
- .ARM.exidx     0x08007b60        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strlen.o)
+ .ARM.exidx     0x08007b20        0x8 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memchr.o)
+ .ARM.exidx     0x08007b28        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strlen.o)
                                   0x8 (size before relaxing)
- .ARM.exidx     0x08007b60        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x08007b28        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x08007b60                        __exidx_end = .
+                0x08007b28                        __exidx_end = .
 
-.rel.dyn        0x08007b60        0x0
- .rel.iplt      0x08007b60        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08007b28        0x0
+ .rel.iplt      0x08007b28        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x08007b60        0x0
-                0x08007b60                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08007b28        0x0
+                0x08007b28                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08007b60                        PROVIDE (__preinit_array_end = .)
+                0x08007b28                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08007b60        0x4
-                0x08007b60                        PROVIDE (__init_array_start = .)
+.init_array     0x08007b28        0x4
+                0x08007b28                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08007b60        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08007b64                        PROVIDE (__init_array_end = .)
+ .init_array    0x08007b28        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08007b2c                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x08007b64        0x4
+.fini_array     0x08007b2c        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08007b64        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08007b2c        0x4 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08007b68                        _sidata = LOADADDR (.data)
+                0x08007b30                        _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x1d4 load address 0x08007b68
+.data           0x20000000      0x1d4 load address 0x08007b30
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4093,11 +4093,11 @@ LOAD /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-non
                 0x200001d4                        . = ALIGN (0x4)
                 0x200001d4                        _edata = .
 
-.igot.plt       0x200001d4        0x0 load address 0x08007d3c
+.igot.plt       0x200001d4        0x0 load address 0x08007d04
  .igot.plt      0x200001d4        0x0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x200001d4                        . = ALIGN (0x4)
 
-.bss            0x200001d4      0x20c load address 0x08007d3c
+.bss            0x200001d4      0x20c load address 0x08007d04
                 0x200001d4                        _sbss = .
                 0x200001d4                        __bss_start__ = _sbss
  *(.bss)
@@ -4137,7 +4137,7 @@ LOAD /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-non
                 0x200003e0                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200003e0      0x600 load address 0x08007d3c
+                0x200003e0      0x600 load address 0x08007d04
                 0x200003e0                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x200003e0                        PROVIDE (_end = .)
@@ -4622,62 +4622,62 @@ LOAD /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-non
  .debug_macro   0x00016e01       0x16 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x00016e17       0xce CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
 
-.debug_line     0x00000000     0xcf71
+.debug_line     0x00000000     0xcf5c
  .debug_line    0x00000000      0x789 CMakeFiles/tempHumidity.dir/Core/Src/HTU21D.c.obj
  .debug_line    0x00000789      0x708 CMakeFiles/tempHumidity.dir/Core/Src/1602_LCD.c.obj
- .debug_line    0x00000e91      0x8af CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
- .debug_line    0x00001740      0x6de CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x00001e1e      0x6b8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x000024d6     0x3a4f CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
- .debug_line    0x00005f25      0xc94 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x00006bb9      0xa59 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x00007612      0xbfb CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x0000820d      0x909 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x00008b16     0x27db CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x0000b2f1      0x6a0 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x0000b991      0x2c0 CMakeFiles/tempHumidity.dir/Core/Src/sysmem.c.obj
- .debug_line    0x0000bc51      0x5ef CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
- .debug_line    0x0000c240       0x7a CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
- .debug_line    0x0000c2ba      0x2b0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-sprintf.o)
- .debug_line    0x0000c56a      0x185 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
- .debug_line    0x0000c6ef      0x882 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_line    0x00000e91      0x89a CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
+ .debug_line    0x0000172b      0x6de CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x00001e09      0x6b8 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x000024c1     0x3a4f CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_line    0x00005f10      0xc94 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x00006ba4      0xa59 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x000075fd      0xbfb CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x000081f8      0x909 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x00008b01     0x27db CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_line    0x0000b2dc      0x6a0 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x0000b97c      0x2c0 CMakeFiles/tempHumidity.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x0000bc3c      0x5ef CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x0000c22b       0x7a CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
+ .debug_line    0x0000c2a5      0x2b0 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-sprintf.o)
+ .debug_line    0x0000c555      0x185 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_line    0x0000c6da      0x882 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
 
-.debug_str      0x00000000    0x8a50b
+.debug_str      0x00000000    0x8a509
  .debug_str     0x00000000    0x84fba CMakeFiles/tempHumidity.dir/Core/Src/HTU21D.c.obj
                               0x852e1 (size before relaxing)
  .debug_str     0x00084fba      0x14b CMakeFiles/tempHumidity.dir/Core/Src/1602_LCD.c.obj
                               0x84b0a (size before relaxing)
- .debug_str     0x00085105      0x64f CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
-                              0x8596b (size before relaxing)
- .debug_str     0x00085754       0xe7 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
-                              0x81ba5 (size before relaxing)
- .debug_str     0x0008583b       0xbd CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                              0x8240a (size before relaxing)
- .debug_str     0x000858f8      0xb61 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_str     0x00085105      0x64d CMakeFiles/tempHumidity.dir/Core/Src/main.c.obj
+                              0x85969 (size before relaxing)
+ .debug_str     0x00085752       0xe7 CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_it.c.obj
+                              0x81ba3 (size before relaxing)
+ .debug_str     0x00085839       0xbd CMakeFiles/tempHumidity.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                              0x82408 (size before relaxing)
+ .debug_str     0x000858f6      0xb61 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
                               0x82a1c (size before relaxing)
- .debug_str     0x00086459      0x299 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x00086457      0x299 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
                               0x81e3f (size before relaxing)
- .debug_str     0x000866f2      0x13a CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x000866f0      0x13a CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
                               0x81b86 (size before relaxing)
- .debug_str     0x0008682c      0x7da CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x0008682a      0x7da CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
                               0x821a1 (size before relaxing)
- .debug_str     0x00087006      0x58d CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x00087004      0x58d CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
                               0x82437 (size before relaxing)
- .debug_str     0x00087593      0x621 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_str     0x00087591      0x621 CMakeFiles/tempHumidity.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
                               0x8240e (size before relaxing)
- .debug_str     0x00087bb4       0x68 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_str     0x00087bb2       0x68 CMakeFiles/tempHumidity.dir/Core/Src/system_stm32f4xx.c.obj
                               0x81a0b (size before relaxing)
- .debug_str     0x00087c1c      0x4fa CMakeFiles/tempHumidity.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x00087c1a      0x4fa CMakeFiles/tempHumidity.dir/Core/Src/sysmem.c.obj
                                0x5af2 (size before relaxing)
- .debug_str     0x00088116     0x1c55 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x00088114     0x1c55 CMakeFiles/tempHumidity.dir/Core/Src/syscalls.c.obj
                                0x937f (size before relaxing)
- .debug_str     0x00089d6b       0x53 CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
+ .debug_str     0x00089d69       0x53 CMakeFiles/tempHumidity.dir/startup_stm32f411xe.s.obj
                                  0x80 (size before relaxing)
- .debug_str     0x00089dbe      0x43c /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-sprintf.o)
+ .debug_str     0x00089dbc      0x43c /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-sprintf.o)
                                 0x570 (size before relaxing)
- .debug_str     0x0008a1fa       0x58 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_str     0x0008a1f8       0x58 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
                                 0x52b (size before relaxing)
- .debug_str     0x0008a252      0x2b9 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_str     0x0008a250      0x2b9 /home/adz/st/stm32cubeclt_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-nano-svfprintf.o)
                                 0x87a (size before relaxing)
 
 .debug_line_str

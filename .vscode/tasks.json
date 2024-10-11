@@ -15,7 +15,7 @@
             "command": "STM32_Programmer_CLI",
             "args": [
                 "--connect",
-                "port=ttyACM0",
+                "port=swd",
                 "--download",
                 "${command:cmake.launchTargetPath}",
                 // Let CMake extension decide executable: "${command:cmake.launchTargetPath}",
