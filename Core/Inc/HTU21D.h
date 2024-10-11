@@ -18,14 +18,18 @@
 #define HTU21D_H
 
 #include "stm32f4xx_hal.h"
+#include <string.h>
 
-/*****************  defining HTU21D address (page 10 of datasheet) **************/
 
-#define HTU21D_ADDR  (0x40 << 1) // I2C address of HTU21D [7 bits so it must be shifted to the left by 1 to be read by the stm32HAl]
 
-/***********  defining all HTU21D I2C commands (page 10 of datasheet)  ***********/
+/*****************  defining HTU21D address (page 10 of datasheet) ******************/
 
-#define soft_reset  0xFE;       // triggers soft reset, must be used during sensor init
+#define HTU21D_ADDR  (0x40 << 1) // I2C address of HTU21D [7 bit address so it must be 
+                                 //shifted to the left by 1 to be read by the stm32HAl]
+
+/*********************  defining all HTU21D I2C commands (page 10 of datasheet)  ***********/
+
+#define soft_reset  0xFE;        // triggers soft reset, must be used during sensor init
 #define Temp_Measure_Hold  0xE3  // Command to trigger temperature measurement
 #define Humid_Measure_Hold 0xE5  // Command to trigger humidity measurement
 
@@ -51,6 +55,7 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c);
  * @todo  this functionality will be changed overtime and will instead be stored to the DMA and stored with a timestamp attained from the RTC
  */
 void read_humidity(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart);
+
 
 /**
  * @brief reads temperature in celcius from the HTU21D sensor

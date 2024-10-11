@@ -1,6 +1,7 @@
 #include "HTU21D.h"
 #include "stm32f4xx_hal.h"
 #include <stdio.h>
+#include <string.h>
 
 
 
@@ -57,7 +58,7 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c)
   {
     uint8_t temp_command = Temp_Measure_Hold;
     uint8_t temp_data[3]; // To store temperature data (2 bytes + checksum)
-    uint16_t raw_temp;
+    uint16_t raw_temp; // the temperature 
     float temperature;
 
     
@@ -71,6 +72,7 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c)
       return;
     }
 
+    // receiving temperature measurment 
     if(HAL_I2C_Master_Receive(hi2c, HTU21D_ADDR  , temp_data, 3, HAL_MAX_DELAY) != HAL_OK)
     {
       char errMsg[] = "Error receiving temperature data!\r\n";
@@ -82,7 +84,7 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c)
     raw_temp = ((uint16_t)temp_data[0] << 8) | (uint16_t)temp_data[1];
     raw_temp &= 0xFFFc;
 
-    // convert raw temp to Celsius using Formula from data sheet
+    // convert raw temp to Celsius using Formula from datasheet (page 15)
     temperature = -46.85 +(175.72 *(raw_temp / 65536.0));
 
     // print temperature over UART

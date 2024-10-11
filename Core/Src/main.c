@@ -24,6 +24,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "HTU21D.h"
+#include "1602_LCD.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,6 +46,7 @@
 I2C_HandleTypeDef hi2c1;
 
 UART_HandleTypeDef huart2;
+LCD_HandleTypeDef lcd_handle;
 
 /* USER CODE BEGIN PV */
 
@@ -99,9 +101,22 @@ int main(void)
 
     HTU21D_init(&hi2c1);
 
+    LCD_HandleTypeDef lcd_handle = { 
+      .RS_Port = Lcd_RegSel_GPIO_Port, .RS_Pin = Lcd_RegSel_Pin,
+      .RW_Port = Lcd_ReadWrite_GPIO_Port, .RW_Pin = Lcd_ReadWrite_Pin,
+      .Enable_Port = Lcd_Enable_GPIO_Port, .Enable_Pin = Lcd_Enable_Pin,
+      .D4_Port = Lcd_D4_GPIO_Port, .D4_Pin = Lcd_D4_Pin,
+      .D5_Port = Lcd_D5_GPIO_Port, .D5_Pin = Lcd_D5_Pin,
+      .D6_Port = Lcd_D6_GPIO_Port, .D6_Pin = Lcd_D6_Pin,
+      .D7_Port = Lcd_D7_GPIO_Port, .D7_Pin = Lcd_D7_Pin
+
+
+    };
+
     // scanning to detect if sensor is found, and at what address.
     I2C_Scanner();
     HAL_Delay(2000);
+    init1602Lcd(&lcd_handle);
 
   /* USER CODE END 2 */
 
@@ -111,13 +126,14 @@ int main(void)
   {
     /* USER CODE END WHILE */
       HAL_GPIO_WritePin(GPIOA,LD2_Pin,GPIO_PIN_SET);
-      HAL_Delay(20);
+      HAL_Delay(2000);
       read_temperature(&hi2c1,&huart2);
       //I2C_Scanner();
       //HAL_Delay(500);
+      //lcd_send_char(&lcd_handle, 'A'); // This will print 'A' on the LCD
       read_humidity(&hi2c1,&huart2);
       HAL_GPIO_WritePin(GPIOA,LD2_Pin,GPIO_PIN_RESET);
-      HAL_Delay(20);
+      HAL_Delay(2000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -288,12 +304,34 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+//init's I2C1 one pins which are GPIOB, PIN8/9 on the board
 GPIO_InitStruct.Pin = GPIO_PIN_8 | GPIO_PIN_9;
 GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
 GPIO_InitStruct.Pull = GPIO_PULLUP;
 GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 GPIO_InitStruct.Alternate = GPIO_AF4_I2C1;
 HAL_GPIO_Init(GPIOB,&GPIO_InitStruct);
+
+
+//** setting up all data pins for lcd as outputs**/
+GPIO_InitStruct.Pin = Lcd_D4_Pin | Lcd_D5_Pin;
+GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+GPIO_InitStruct.Pin = Lcd_D6_Pin | Lcd_D7_Pin;
+GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
+
+GPIO_InitStruct.Pin = Lcd_ReadWrite_Pin | Lcd_Enable_Pin | Lcd_RegSel_Pin;
+GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 /* USER CODE END MX_GPIO_Init_2 */
 }
@@ -309,8 +347,7 @@ HAL_GPIO_Init(GPIOB,&GPIO_InitStruct);
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to repo#define HTU21D_ADDR 0x40 // I2C address of HTU21D
-  #define Temp_Measure_Hold 0xE3 // command to trigger temperature measurementrt the HAL error return state */
+  /* User can add his own implementation to repo the HAL error return state */
   __disable_irq();
   while (1)
   {
