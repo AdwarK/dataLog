@@ -46,6 +46,10 @@ target_sources(stm32cubemx INTERFACE
     ../../Core/Src/sysmem.c
     ../../Core/Src/syscalls.c
     ../../startup_stm32f411xe.s
+    ../../Core/Src/HTU21D.c
+    ../../Core/Src/peripherialFunctions.c
+    ../../Core/Src/1602_LCD.c
+
 )
 
 target_link_directories(stm32cubemx INTERFACE

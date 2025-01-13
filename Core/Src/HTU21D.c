@@ -2,7 +2,10 @@
 #include "stm32f4xx_hal.h"
 #include <stdio.h>
 #include <string.h>
+#include "1602_LCD.h"
 
+extern I2C_HandleTypeDef hi2c1;
+extern UART_HandleTypeDef huart2;
 
 
 void HTU21D_init(I2C_HandleTypeDef *hi2c)
@@ -13,7 +16,7 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c)
 
 
 
-  void read_humidity(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart)
+  float read_humidity(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart)
   {
     uint8_t humidity_command = Humid_Measure_Hold;
     uint8_t humid_data[3]; // to store humidity data (2 bytes + checksum)
@@ -47,14 +50,14 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c)
     sprintf(tempMsg, "Humidity: %.2f %%\r\n", humidity);
     HAL_UART_Transmit(huart, (uint8_t*)tempMsg, strlen(tempMsg), HAL_MAX_DELAY);
 
-    return;
+    return humidity;
 
 
 
 
   }
 
-  void read_temperature(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart)
+  float read_temperature(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart)
   {
     uint8_t temp_command = Temp_Measure_Hold;
     uint8_t temp_data[3]; // To store temperature data (2 bytes + checksum)
@@ -90,8 +93,42 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c)
     // print temperature over UART
     
     char tempMsg[50];
-    sprintf(tempMsg, "Temperature: %.2f°C\r\n", temperature);
+    
+    sprintf(tempMsg, "Temp: %.2fC\r\n", temperature);
     HAL_UART_Transmit(huart, (uint8_t*)tempMsg, strlen(tempMsg), HAL_MAX_DELAY);
+
+    return temperature;
   }
 
+void LCD_PrintTempHumidity(void)
+{
+  float currentTemp = read_temperature(&hi2c1, &huart2);
+  float currentHumi = read_humidity(&hi2c1, &huart2);
 
+  //converting floats into char passing them into buffers
+  char currentTempArray[50];
+  char currentHumiArray[50];
+
+  sprintf(currentTempArray, "Temp: %.2fC", currentTemp);
+  sprintf(currentHumiArray,"Humidity:%.2f", currentHumi);
+ 
+
+
+
+  LCD_ClearScreen();
+  
+  LCD_SendString(currentTempArray);
+  
+  LCD_NextLine();
+
+  LCD_SendString(currentHumiArray);
+
+  LCD_SendChar('%');
+
+
+
+
+
+
+    
+}

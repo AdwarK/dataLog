@@ -19,6 +19,7 @@
 
 #include "stm32f4xx_hal.h"
 #include <string.h>
+#include "1602_LCD.h"
 
 
 
@@ -54,7 +55,7 @@ void HTU21D_init(I2C_HandleTypeDef *hi2c);
  *        peripherial. used to send humidity data to serial monitor
  * @todo  this functionality will be changed overtime and will instead be stored to the DMA and stored with a timestamp attained from the RTC
  */
-void read_humidity(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart);
+float read_humidity(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart);
 
 
 /**
@@ -68,8 +69,10 @@ void read_humidity(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart);
  *        this function will have a parameter that will determine if the user wants the temperature in celcius or farenheight
  * 
  */
-void read_temperature(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart);
+ float read_temperature(I2C_HandleTypeDef *hi2c,UART_HandleTypeDef *huart);
 
+
+void LCD_PrintTempHumidity(void);
 
 #endif //HTU21D_H
 

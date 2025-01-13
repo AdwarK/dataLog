@@ -15,7 +15,11 @@
 
 
 
-#include <stm32f4xx.h>
+#include "stm32f4xx.h"
+#include "stm32f4xx_hal.h"
+#include <stdio.h>
+#include "main.h"
+#include "peripherialFunctions.h"
 
 
 
@@ -41,9 +45,14 @@ typedef struct {
 
 
 
-void init1602Lcd(LCD_HandleTypeDef* lcd_handle);
-
-
+void init1602Lcd();
+void LCD_SendNibble(uint8_t LCD_NibbleData);
+void LCD_NibbleClear(void);
+void LCD_Enable(void);
+void Test_LCD_Initialization(void);
+void LCD_SendString(const char *str);
+void LCD_NextLine(void);
+void LCD_ClearScreen(void);
 
 
 
